@@ -1,0 +1,13 @@
+<p>student-list works!</p>
+<ul class="list-group">
+    <li *ngFor="let student of students" class="list-group-item"> 
+        <div class="row">
+            <div class="col-1">{{student.id}}v </div>    
+            <div class="col-2"> {{student.name}}</div>
+            <div class="col-3">
+                <button (click)="DeleteStudent(student)" >Delete Student </button>
+            </div>
+        </div>
+       
+    </li>
+</ul>
