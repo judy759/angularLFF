@@ -1,6 +1,7 @@
 import { core } from "@angular/compiler";
 import {Component} from "@angular/core";
 import {ListStudentComponent} from './list-student/list-student.component'
+import { StudentDetailsComponent } from "./student-details/student-details.component";
 
 
 @Component({

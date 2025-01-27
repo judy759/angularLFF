@@ -1,0 +1,8 @@
+<div class="student-details" *ngIf="student">
+    <h2>פרטי תלמידה</h2>
+    <p><strong>שם:</strong> {{ student?.name }}</p>
+    <p><strong>גיל:</strong> {{ student?.age }}</p>
+    <p><strong>קורס:</strong> {{ student?.course }}</p>
+    <p><strong>מצב:</strong> {{ student?.passed ? 'עברה' : 'לא עברה' }}</p>
+  </div>
+  
