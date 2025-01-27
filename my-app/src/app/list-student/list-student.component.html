@@ -4,11 +4,27 @@
       <h2>{{ student.name }}</h2>
       <p><strong>גיל:</strong> {{ student.age }}</p>
       <p><strong>קורס:</strong> {{ student.course }}</p>
+      <p><strong>מצב:</strong> 
+        <span [class.passed]="student.passed" [class.failed]="!student.passed">
+          {{ student.passed ? 'עברה' : 'לא עברה' }}
+        </span>
+      </p>
+      <button (click)="selectStudent(student)">הצג פרטים</button>
       <button (click)="removeStudent(i)" class="delete-button">מחקי תלמידה</button>
+      <div *ngIf="students.length === 0" class="empty-message">
+        אין תלמידות ברשימה.
+      </div>
     </div>
   
-    <div *ngIf="students.length === 0" class="empty-message">
-      אין תלמידות ברשימה.
+    <div class="add-student-form">
+      <h2>הוספת תלמידה חדשה</h2>
+      <input #name type="text" placeholder="שם" />
+      <input #age type="number" placeholder="גיל" />
+      <input #course type="text" placeholder="קורס" />
+      <button (click)="addStudent(name.value, +age.value, course.value)">הוסיפי</button>
+      
     </div>
+  
+    <student-details [student]="selectedStudent"></student-details>
   </div>
   
