@@ -1,12 +1,10 @@
 import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { BrowserModule } from "@angular/platform-browser";
-//import { Student } from "./student.model";
-import { StudentListComponent } from "./student-list/student-list.component";
-import { StudentDetailsComponent } from "./student-details/student-details.component";
+import { ListStudentComponent } from "./list-student/list-student.component";
 
 @NgModule({
-    declarations:[AppComponent,StudentListComponent,StudentDetailsComponent],
+    declarations:[AppComponent,ListStudentComponent],
     imports:[BrowserModule],
     bootstrap:[AppComponent]
 })

@@ -1,0 +1,14 @@
+<div class="student-list">
+    <h1>רשימת תלמידות</h1>
+    <div *ngFor="let student of students; let i = index" class="student-card">
+      <h2>{{ student.name }}</h2>
+      <p><strong>גיל:</strong> {{ student.age }}</p>
+      <p><strong>קורס:</strong> {{ student.course }}</p>
+      <button (click)="removeStudent(i)" class="delete-button">מחקי תלמידה</button>
+    </div>
+  
+    <div *ngIf="students.length === 0" class="empty-message">
+      אין תלמידות ברשימה.
+    </div>
+  </div>
+  
